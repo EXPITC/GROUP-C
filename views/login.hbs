@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="/public/css/todo.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+<body>
+    <header>
+         <button onclick="location.href = '/'">BACK</button>
+        <button onclick="location.href = '/register'">REGISTER</button>
+    </header>
+    <div class="container-main-page">
+        <div class="login">
+                <h3>LOGIN</h3>
+            <div class="login-container">
+                <form action="/login" method="post">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Enter your password">
+                <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+{{>footer}}

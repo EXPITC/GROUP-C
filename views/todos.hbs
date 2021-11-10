@@ -1,0 +1,64 @@
+{{>header}}
+ <div class="containertodo">
+        <div class="threeitem">
+            <button onclick="location.href = '/'">back</button>
+            <div class="showname">{{name}}</div>
+            {{#if val}}
+            <button id="deleted"onclick="location.href = 'del/{{id}}'">deleted</button>
+        </div>
+        <div class="input">
+            <form action="/newtask" method="post">
+                <input type="text" name="input" id="" placeholder="add task">
+                <input type="text" name="inputid" value="{{id}}" hidden>
+                <input type="submit" hidden>
+            </form>
+        </div>
+        <div class="task">
+            <h3>TASK - {{notyet}}</h3>
+            <div class="csstask">
+                {{#each tasknotyet}}
+                <a href="done/{{this.id}}" class="notyet">
+                    <div class="todobox">
+                        <h3>{{this.name}}</h3>
+                </a>
+                        <button onclick="location.href = 'deleted/{{this.id}}'">del</button>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="done">
+            <h3>complete - {{done}}</h3>
+            {{#each taskisDone}}
+            <a href="notyet/{{this.id}}" class="notyet">
+                <div class="donebox">
+                    <h3>{{this.name}}</h3>
+            </a>
+                 <button onclick="location.href = 'deleted/{{this.id}}'">del</button>
+                </div>
+            {{/each}}
+        </div>
+        {{else}}
+        </div>
+        <div class="input">
+        </div>
+        <div class="task">
+            <h3>TASK - {{notyet}}</h3>
+            <div class="csstask">
+                {{#each tasknotyet}}
+                    <div class="todobox">
+                        <h3>{{this.name}}</h3>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="done">
+            <h3>complete - {{done}}</h3>
+            {{#each taskisDone}}
+                <div class="donebox">
+                    <h3>{{this.name}}</h3>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+{{>footer}}

@@ -1,0 +1,67 @@
+.containertodo {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.threeitem {
+    width: 50%;
+    display: flex;
+}
+#deleted {
+    margin-left: 100%;
+}
+.input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.input form input{
+    width: 100%;
+}
+.task{
+    width: 50%;
+}
+.csstask {
+    display:flexbox;
+    flex-direction: column;
+}
+.csstask a {
+    width: 100px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.todobox {
+    display: flex;
+    justify-content:space-between;
+    color: white;
+    padding: 10px;
+    height: 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 4px;
+    background:black;
+}
+.todobox h3 {
+    font: 10px;
+}
+.donebox {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    height: 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 4px;
+    background:rgb(21, 255, 0);
+}
+.done {
+    margin-top: 10px;
+    width: 50%;
+}
+.done a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    /* border: 1px solid red; */
+    height:500px;
+    width: 80%;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}

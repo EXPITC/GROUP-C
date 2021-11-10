@@ -1,0 +1,39 @@
+{{>header}}
+<div class="container-main-page">
+        <div class="titile-main-page">
+            <h1>Collections</h1>
+        </div>
+        <div class="box-collection">
+            {{#each collection}}
+            <a href="/todo/{{this.id}}">
+            <div class="box">
+                <h1>{{this.name}}</h1>
+                <h3>9/10 isdone</h3>
+            </div>
+            {{/each}}
+            {{#if isLogin}}
+            <a onclick="trig()">
+                 
+                <div class="box">
+                    <h1 id ="addhide">ADD</h1>
+                    <form method="post"  action="/collection">
+                    <input type="text" name="newcollection" placeholder="new name">
+                    <input type="submit" hidden>
+                    </form>
+                </div>
+            </a>
+            {{/if}}
+        </div>
+    </div>
+   
+</div>
+    <script>
+    function trig() {
+        document.getElementById('addhide').style.add("hidden")
+    }
+    function trig2(){
+         document.getElementById('addhide').style.remove("hidden")
+    }
+    }
+    </script>
+{{>footer}}
